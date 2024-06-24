@@ -1,0 +1,151 @@
+document.getElementById("perfil-ninos-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe normalmente
+
+    // Obtener los datos del formulario
+    var formData = new FormData(this);
+    var nombre_hijo = $('#nombre_hijo').val();
+    var genero = $('input[name="genero"]:checked').val();
+    var condicion = $('#condicion').val();
+    var fecha_nacimiento = $('#fecha_nacimiento').val();
+    var edad = $('#edad').val();
+    var parentesco = $('#parentesco').val();
+    var foto_perfil = $('#foto_perfil')[0].files[0];
+
+    // Validar que se completen todos los campos
+    if (!nombre_hijo ||!genero ||!condicion ||!fecha_nacimiento ||!edad ||!parentesco) {
+        alert('Por favor, complete todos los campos.');
+        return;
+    }
+
+    // Agregar los datos adicionales al FormData
+    formData.append('nombre_hijo', nombre_hijo);
+    formData.append('genero', genero);
+    formData.append('condicion', condicion);
+    formData.append('fecha_nacimiento', fecha_nacimiento);
+    formData.append('edad', edad);
+    formData.append('parentesco', parentesco);
+    if (foto_perfil) {
+        formData.append('foto_perfil', foto_perfil);
+    }
+
+    // Enviar la solicitud AJAX al servidor
+    $.ajax({
+        url: 'perfil_niños.php',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            if (response == 'success') {
+                alert('Perfil guardado exitosamente.');
+                $('#perfil-ninos-form')[0].reset();
+            } else if (response == 'error') {
+                alert('Error al guardar el perfil. Por favor, inténtelo de nuevo.');
+            } else if (response == 'existe') {
+                alert('El niño ya está registrado.');
+            }
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('#fecha_nacimiento').change(function () {
+        var fecha_nacimiento = $(this).val();
+        var hoy = new Date();
+        var fecha_nacimiento_date = new Date(fecha_nacimiento);
+        var edad = hoy.getFullYear() - fecha_nacimiento_date.getFullYear();
+        if (hoy.getMonth() < fecha_nacimiento_date.getMonth() || (hoy.getMonth() == fecha_nacimiento_date.getMonth() && hoy.getDate() < fecha_nacimiento_date.getDate())) {
+            edad--;
+        }
+        $('#edad').val(edad);
+    });
+
+    $('.btn-check').change(function() {
+        $('.btn').removeClass('btn-activo');
+        $(this).siblings('label').addClass('btn-activo');
+    });
+});
+
+document.getElementById("foto_perfil").addEventListener("change", function() {
+    var fileInput = document.getElementById("foto_perfil");
+    var fileName = fileInput.files[0].name;
+    document.getElementById("custom-file-label").innerHTML = fileName;
+});
+
+
+    function goBack() {
+        window.history.back();
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        mostrarSeccion('seccion_motor');
+        setupBtnSeccion();
+    });
+    
+    function mostrarSeccion(idSeccion) {
+        var secciones = document.querySelectorAll('.seccion-form');
+        secciones.forEach(function(seccion) {
+            seccion.style.display = 'none';
+        });
+    
+        var seccionMostrar = document.getElementById(idSeccion);
+        if (seccionMostrar) {
+            seccionMostrar.style.display = 'block';
+        }
+    }
+    
+    function setupBtnSeccion() {
+        let btnSeccion = document.querySelectorAll('.btn-secciones');
+        btnSeccion.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var seccionMostrar = this.nextElementSibling;
+                if (seccionMostrar.style.display === 'none') {
+                    seccionMostrar.style.display = 'block';
+                } else {
+                    seccionMostrar.style.display = 'none';
+                }
+            });
+        });
+    }
+    
+
+    function mostrarEdad(idEdad) {
+        var seccionesEdades = document.querySelectorAll('.seccion-edad');
+        seccionesEdades.forEach(function(edad) {
+            edad.style.display = 'none';
+        });
+    
+        var edadMostrar = document.getElementById('seccion-' + idEdad);
+        if (edadMostrar) {
+            edadMostrar.style.display = 'block';
+        }
+        
+        
+    }
+
+
+
+
+    //Chatbot
+    
+    function startChatbot() {
+        document.getElementById('chatbot-start-btn').style.display = 'none'; // Oculta el botón de inicio del chatbot
+        document.querySelector('.medico-container').style.display = 'none'; // Oculta el contenedor del médico
+        document.getElementById('chatbot-iframe-container').style.display = 'block'; // Muestra el contenedor del chatbot
+        document.getElementById('chatbot-iframe').src = 'https://poe.com/M-I-T'; // URL del chatbot de Poe
+    }
+
+    function closeChatbot() {
+        document.getElementById('chatbot-iframe').src = ''; // Detiene la carga del chatbot
+        document.getElementById('chatbot-iframe-container').style.display = 'none'; // Oculta el contenedor del chatbot
+        document.querySelector('.medico-container').style.display = 'flex'; // Muestra el contenedor del médico
+        document.getElementById('chatbot-start-btn').style.display = 'block'; // Muestra el botón de inicio del chatbot
+    }
+
+    function closeMedico() {
+        document.querySelector('.medico-container').style.display = 'none'; // Oculta el contenedor del médico
+    }
+
+    //Graficas
+    

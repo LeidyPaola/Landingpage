@@ -1,0 +1,343 @@
+/* Estilos generales para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b65d8;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px; /* Añadir padding al navbar */
+
+}
+
+/* Estilos para el logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0 40px;
+    margin-right: 10%; /* Separación del logo respecto a la lista de navegación */
+
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.foto-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Estilos para el contenedor de la foto de perfil */
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Cambiar el borde a un círculo */
+    overflow: hidden; /* Ocultar cualquier contenido que se salga del círculo */
+    background-color: #f8f9fa; /* Color de fondo para el contenedor */
+    margin-right: 10px; /* Espaciado derecho (puedes ajustarlo según necesites) */
+}
+
+/* Estilos para la imagen de perfil */
+.foto-profile {
+    width: 100%; /* Asegurar que la imagen ocupe todo el contenedor */
+    height: 100%; /* Asegurar que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Escalar la imagen para cubrir todo el contenedor */
+    border-radius: 50%;
+
+}
+
+
+/* Estilos para botón hamburguesa en PC */
+.navbar-toggler {
+    display: none;
+    color: black; /* Cambiar el color del botón hamburguesa a negro */
+    font-size: 24px;
+    padding: 5px 10px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Estilos para la lista de navegación en PC */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #b0b0eb;
+    color: white;
+}
+
+.nav-item.active .nav-link {
+    color: #aabdfd;
+    border-bottom: 2px solid transparent;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color:#86e0f7;
+}
+
+/* Estilos para los botones y las secciones */
+.botones-secciones {
+    display: flex;
+    flex-direction: column; /* Mostrar botones en bloque vertical */
+    gap: 10px; /* Espacio entre botones y secciones */
+    
+}
+
+.btn-secciones {
+    width: 25%; /* Ancho completo */
+    background-color: #2aa6e4;
+    color: white;
+    
+}
+
+/* Estilos para el botón "Iniciar Sesión" y "Registrar" */
+.btn-login
+{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.btn-registrar {
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.btn-login:hover {
+    background-color: white;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-registrar:hover{
+    background-color: #28a745;
+    color: white;
+    border-color: white;
+}
+
+/* Estilos para la barra de búsqueda */
+.form-inline {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.form-inline input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.buscar-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buscar-btn:hover {
+    background-color: #1b00b3;
+}
+
+
+
+
+.llamado {
+    color: white; /* Color del texto */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Bienvenida1.jpg') center/cover no-repeat fixed;
+    opacity: rgb 0 0 0 / 0.5;  /* Ajusta la opacidad según tus preferencias */
+    padding: 60px 0; /* Espaciado interno para la sección */ /* Ajusta el espacio superior para que la barra de navegación no tape la imagen */
+    background-position: 10% 0 ;
+  }
+
+
+.llamado-container {
+    max-width: 70%; /* Ancho máximo del contenedor (70% de la pantalla) */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno del contenedor */
+    background-color: rgba(124, 170, 207, 0.9); /* Color de fondo con transparencia */
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Bienvenida2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  
+.hero h2, h4 {
+    text-align: justify;
+}
+
+
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600; /* Puedes ajustar el color según tu preferencia */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .cta-button:hover {
+    background-color: #ff9900; /* Color de fondo al pasar el mouse */
+  }
+  
+ 
+
+
+.beneficios{
+    background-color: #53a8bb;
+    color: white;
+    max-width: 100%;
+    background-position: 10% 0 ;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.beneficios .col-md-3 img {
+    max-width: 80%; /* Limita el ancho máximo de las imágenes */
+    height: 50%; /* Mantiene la proporción de aspecto de las imágenes */
+}
+
+
+
+.beneficios h4 {
+    margin-top: 20px; /* Espacio superior para los textos */
+    margin-right: 20px;  
+    margin-left: 20px;  
+}
+
+.llamado-container h1{
+    
+        margin-bottom: 20px; /* Espacio inferior para separar los elementos */
+    
+}
+.llamado-container h3 {
+    margin-bottom: 20px; /* Espacio inferior para separar los elementos */
+    color: black;
+}
+
+.llamado-container a {
+    margin-top: 20px; /* Espacio superior para el enlace */
+}
+
+
+/* Estilo para la sección de planes */
+.planes{
+    background: #53a8bb;
+    opacity: rgb 0 0 0 / 0.5;  /* Ajusta la opacidad según tus preferencias */
+    padding: 60px 0; /* Espaciado interno para la sección */ /* Ajusta el espacio superior para que la barra de navegación no tape la imagen */
+    background-position: 10% 0 ;
+    
+}
+
+
+  /* Estilo para la sección de testimonios */
+.testimonios {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Bienvenida.jpg') center/cover no-repeat fixed;
+    opacity: rgb 0 0 0 / 0.5;  /* Ajusta la opacidad según tus preferencias */
+    padding: 10px 0 100px 0 ; /* Espaciado interno para la sección */ /* Ajusta el espacio superior para que la barra de navegación no tape la imagen */
+    color: white;
+    text-align: center;
+}
+
+
+ /* Estilos para las líneas indicadoras */
+ .carousel-indicators li {
+    background-color: #007bff; /* Color azul */
+    border: 1px solid #007bff; /* Borde azul */
+    width: 20px; /* Ancho de los puntos */
+    height: 1px; /* Alto de los puntos */
+}
+
+/* Estilo para la paginación del carousel */
+.carousel-indicators {
+    bottom: -40px; /* Ajusta la posición de la paginación */
+}
+ 
+
+
+
+footer {
+    position:relative ;
+    bottom: 0;
+    width: 100%;
+    background-color: #3b65d8;
+    padding: 10px;
+    text-align: center;
+}
