@@ -3,269 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Enlace a Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Enlace a Font Awesome -->
-    <link rel="stylesheet" href="style.css"> <!-- Enlace a style.css -->
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <title>Wisles Variedades</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-SXwG26QZdm5JgzT5cMNItZs2ZxfzMHT+aA9Bj0szQ4Aur+3kDhrI2j2hTTv3s2bHD5CMU6tOeuvBmGbH9AJB0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-    
-<header>
+    <header>
         <nav class="navbar navbar-expand-lg ">
             <!-- Logo -->
-            <div class="logo-container">
-                <img src="img/logo.jpg" alt="Logo" class="logo-img">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="Logo de Wisles Variedades">
+                <h1>Wisles Variedades</h1>
             </div>
             <!-- Botón de hamburguesa -->
-            <button class="navbar-toggler" type="btn" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
             </button>
+
             
             <!-- Lista de navegación -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link btn" href="index.php">Página principal <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn" href="acerca.php">Acerca de</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn" href="funcionamiento.php">Funcionamiento</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn" href="ayuda.php">Ayuda</a>
-                    </li>
+                <ul class="nav-links">
+                    <li><a class="nav-item" href="#">Inicio</a></li>
+                    <li><a class="nav-item" href="#">Tienda</a></li>
+                    <li><a class="nav-item" href="#">Contacto</a></li>
                 </ul>
-                <div class="search-user">
-                <div class="form-inline">
-                    <input id="searchInput" class="form-control search-input" type="search" placeholder="Buscar una sección..." aria-label="Search">
-                    <button id="searchBtn" class="buscar-btn btn btn-outline-success my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link btn-login" href="login.php">Iniciar Sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn-registrar" href="registrar.php">Registrar</a>
-                    </li>
+                <ul class="nav-buttons">
+                    <li><button class="nav-item">Login</button></li>
+                    <li><button class="nav-item">Registrar</button></li>
                 </ul>
             </div>
         </nav>
-    </header>
-    <main class="main" id="busqueda">
-       
-   
-
-    <section id="hero" class="hero">
-    <div class="row justify-content-center container-condiciones">
-            <div class="col-md-6">
-        <h1><b>¡Bienvenido a Mundo Infantil Terapéutico!</b></h1>
-        <h2>Estamos aquí para apoyarte en el emocionante viaje de estimular el desarrollo de tu hijo.</h2>
-        <h4>Apoya el desarrollo de tu hijo desde casa con actividades personalizadas, asesoramiento virtual y una comunidad de apoyo. ¡Juntos lograremos grandes avances!</h4>
-        <a href="registrar.php" class="btn btn-outline-primary cta-button" style=" position: text-center;" >Comienza Ahora</a>
-      </div>
-      </div>
-    </section>
-
-   
-            <section id="beneficios" class="beneficios">
-            <h1><b>Beneficios Destacados</b></h1><br>
-        <div class="row  container-condiciones">
-            <div class="col-md-3">
-            
-                <img src="img/Beneficio.jpg" alt="Información Especializada" class="img-fluid">
-                <h4>Accede a información detallada sobre diferentes neurodivergencias.</h4>
-                </div>
-            <div class="col-md-3">
-            <img src="img/Beneficio1.jpg" alt="Recursos Educativos" class="img-fluid">
-            <h4>Descarga material educativo especializado y actividades diseñadas para niños neurodivergentes.</h4>
-                </div>
-            <div class="col-md-3">
-            <img src="img/Beneficio2.jpg" alt="Foros y Discusiones" class="img-fluid">
-                <h4>Participa en foros de discusión y sesiones de preguntas y respuestas.</h4>
-                </div>
-            <div class="col-md-3">
-            <img src="img/Beneficio3.jpg" alt="Comunidad de Apoyo" class="img-fluid">
-                <h4>Obten encuentros con profesionales para realizar seguimiento individual por un modico valor.</h4>
-                </div>
-        </div>
-        <div class="row justify-content-center container-condiciones">
-            <div class="col-md-3">
-            <img src="img/Beneficio4.jpg" alt="Acceso 24/7" class="img-fluid">
-            <h4>Disponible las 24 horas del día, los 7 días de la semana.</h4>
-                </div>
-            <div class="col-md-3">
-            <img src="img/Beneficio5.jpg" alt="Chatbot IA como Terapeuta" class="img-fluid">
-            <h4>Utiliza nuestro chatbot inteligente como un recurso adicional.</h4>
-                </div>
-            <div class="col-md-3">
-            <img src="img/Beneficio6.jpg" alt="Revisión y Verificación de Avance" class="img-fluid">
-            <h4>Realiza un seguimiento del progreso de tu hijo.</h4>
-                </div>
-                <div class="col-md-3">
-                <img src="img/Beneficio7.jpg" alt="Plataforma Gratuita" class="img-fluid">
-            <h4>Accede a varios beneficios de la plataforma de manera gratuita.</h4>
-                </div>
-        </div>
-    </section>
-
-<section id="llamado" class="llamado">
-    <div class="container">
-        <div class="row justify-content-center container-condiciones">
-            
-            <div class="llamado-container">
-                <h1>¡Únete a nuestra comunidad de padres comprometidos!</h1>
-                <h3>Obtén acceso ilimitado a recursos educativos, actividades personalizadas y una comunidad de apoyo dedicada a tu familia.</h3>
-                <a href="registrar.php" class="btn btn-outline-primary btn-registrar">Registrate Gratis!</a>
-            <hr>
-                <h1>Descubre un mundo de apoyo y recursos para tu hijo</h1>
-                <h3>Inscríbete hoy y comienza a transformar el desarrollo de tu hijo desde la comodidad de tu hogar.</h3>
-                <a href="login.php" class="btn btn-outline-primary btn-login" >Inicia Sesión Ahora</a>
-            
-            
-            </div>
-        </div>
         
-        <div class="row mt-5">
-            <div class="col-md-8 offset-md-2 text-center">
-                <h4><b>Regístrate ahora mismo y descubre cómo podemos ayudarte a convertirte en el mejor coterapeuta para tu hijo.</b></h4>
-                </div>
-        </div>
-    </div>
-</section>
+</header>
+    
+    <main>
 
-<section id="planes" class="planes">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-md-6">
-                <div class="card container-plan">
-                    <div class="card-header bg-primary text-white">
-                        <h1>Plan Gratuito</h1> <!-- Cambiado a h1 -->
+        <section id="hero" class="hero">
+            <div class="row justify-content-center container-condiciones">
+                    <div class="col-md-6">
+                        <h2>Bienvenidos a Wisles Variedades</h2>
+                        <p>Descubre un universo Montessori lleno de creatividad y desarrollo para tus hijos en Wisles Variedades, donde cada juguete inspira el aprendizaje y la exploración libre.</p>
+                        <button class="cta-button">Explora nuestra tienda</button>
                     </div>
-                    <div class="card-body">
-                        <h3>Acceso Básico</h3> <!-- Cambiado a h3 -->
-                        <ul class="text-left">
-                            <li><h5>Ver información y guías</h5></li> <!-- Cambiado a h5 -->
-                            <li><h5>Chatbot de ayuda</h5></li> <!-- Cambiado a h5 -->
-                            <li><h5>Descargar guías</h5></li> <!-- Cambiado a h5 -->
-                        </ul>
-                        <hr> <!-- Línea separadora -->
-                        <p><strong>Costo: $0 COP</strong></p> <!-- Información del precio -->
-                        <a href="registrar.php" class="btn btn-primary">Registrarse</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-success text-white">
-                        <h1>Plan Premium</h1> <!-- Cambiado a h1 -->
-                    </div>
-                    <div class="card-body">
-                        <h3>Acceso Completo</h3> <!-- Cambiado a h3 -->
-                        <ul class="text-left">
-                            <li><h5>Asesoría individual con profesionales</h5></li> <!-- Cambiado a h5 -->
-                            <li><h5>Juegos con realidad aumentada</h5></li> <!-- Cambiado a h5 -->
-                            <li><h5>Tutoriales personalizados</h5></li> <!-- Cambiado a h5 -->
-                        </ul>
-                        <hr> <!-- Línea separadora -->
-                        <p><strong>Costo: Desde $30,000 COP al mes</strong></p> <!-- Información del precio -->
-                        <a href="suscripcion.php" class="btn btn-success">Suscribirse</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+              </div>
+            </section>
 
-
-<section id="testimonios" class="testimonios mb-n5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <h1><b>Testimonios de Nuestros Usuarios</b></h1>
+            <section class="products">
+                <h2 class="text-center">Nuestros Productos</h2>
             
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/Testimonio1.jpg" alt="First slide">
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete1.jpg" alt="Juguete Montessori 1">
+                            <h3>Juguete Montessori 1</h3>
+                            <p>$22.900 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="1">Añadir al Carrito</button>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/Testimonio2.jpg" alt="Second slide">
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete2.jpg" alt="Juguete Montessori 2">
+                            <h3>Juguete Montessori 2</h3>
+                            <p>$97.200 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="2">Añadir al Carrito</button>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/Testimonio3.jpg" alt="Third slide">
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete3.jpg" alt="Juguete Montessori 3">
+                            <h3>Juguete Montessori 3</h3>
+                            <p>$200.500 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="3">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete4.jpg" alt="Juguete Montessori 4">
+                            <h3>Juguete Montessori 4</h3>
+                            <p>$184.900 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="4">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete5.jpg" alt="Juguete Montessori 5">
+                            <h3>Juguete Montessori 5</h3>
+                            <p>$22.900 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="5">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete6.jpg" alt="Juguete Montessori 6">
+                            <h3>Juguete Montessori 6</h3>
+                            <p>$10.000 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="6">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete7.jpg" alt="Juguete Montessori 7">
+                            <h3>Juguete Montessori 7</h3>
+                            <p>$21.700 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="7">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete8.jpg" alt="Juguete Montessori 8">
+                            <h3>Juguete Montessori 8</h3>
+                            <p>$84.900 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="8">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete9.jpg" alt="Juguete Montessori 9">
+                            <h3>Juguete Montessori 9</h3>
+                            <p>$32.900 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="9">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete10.jpg" alt="Juguete Montessori 10">
+                            <h3>Juguete Montessori 10</h3>
+                            <p>$37.200 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="10">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete11.jpg" alt="Juguete Montessori 11">
+                            <h3>Juguete Montessori 11</h3>
+                            <p>$48.500 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="11">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete12.jpg" alt="Juguete Montessori 12">
+                            <h3>Juguete Montessori 12</h3>
+                            <p>$84.900 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="12">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete13.jpg" alt="Juguete Montessori 13">
+                            <h3>Juguete Montessori 13</h3>
+                            <p>$82.900 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="13">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product">
+                            <img src="img/juguete14.jpg" alt="Juguete Montessori 14">
+                            <h3>Juguete Montessori 14</h3>
+                            <p>$10.000 COP</p>
+                            <button class="add-to-cart btn-carrito" data-product-id="14">Añadir al Carrito</button>
+                        </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            </section>
+            
+
+            <section class="montessori-method">
+                <div class="container">
+                    <h2 class="text-center mb-4">El Método Montessori y los Beneficios de los Juguetes Montessori</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/montessori-classroom.jpg" alt="Salón Montessori" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3>¿Qué es el Método Montessori?</h3>
+                            <p>El Método Montessori es un enfoque educativo desarrollado por la doctora María Montessori que se centra en el desarrollo integral del niño. Se caracteriza por ofrecer un ambiente preparado donde los niños tienen la libertad de elegir sus actividades, aprender a su propio ritmo y desarrollar habilidades a través del juego y la exploración.</p>
+                            <p>Este método promueve la autoeducación, la independencia, la responsabilidad y el respeto hacia los demás. Los salones Montessori están diseñados para facilitar el aprendizaje práctico y sensorial, utilizando materiales educativos específicos que ayudan al niño a desarrollar habilidades cognitivas, físicas y emocionales de manera natural y sin presiones externas.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6 order-md-2">
+                            <img src="img/montessori-toys.jpg" alt="Juguetes Montessori" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <h3>Beneficios de los Juguetes Montessori</h3>
+                            <p>Los juguetes Montessori están diseñados para promover el desarrollo holístico de los niños. Estos juguetes no solo entretienen, sino que también educan y estimulan diferentes áreas del desarrollo infantil:</p>
+                            <ul>
+                                <li><strong>Desarrollo cognitivo:</strong> Fomentan la resolución de problemas, la concentración y el pensamiento creativo.</li>
+                                <li><strong>Desarrollo físico:</strong> Mejoran la coordinación, la motricidad fina y la fuerza muscular.</li>
+                                <li><strong>Desarrollo emocional:</strong> Ayudan a gestionar emociones, desarrollar la autoestima y promover la autoconfianza.</li>
+                                <li><strong>Desarrollo social:</strong> Facilitan el juego colaborativo, la comunicación y el trabajo en equipo.</li>
+                            </ul>
+                            <p>Además, los juguetes Montessori están hechos de materiales naturales y sostenibles, lo que los convierte en opciones respetuosas con el medio ambiente y seguras para los niños.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+
+            <section class="featured">
+                <div class="container">
+                    <h2 class="text-center mb-4">Productos Destacados</h2>
+                    
+                    <div id="productCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#productCarousel" data-slide-to="1"></li>
+                        <!-- Agrega más indicadores según sea necesario -->
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-5">
+                                    <div class="product">
+                                        <img src="img/juguete1.jpg" alt="Juguete Montessori 1">
+                                        <h3>Juguete Montessori 1</h3>
+                                        <p>$72.900 COP</p>
+                                        <button class="add-to-cart btn-carrito" data-product-id="1">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="product">
+                                        <img src="img/juguete2.jpg" alt="Juguete Montessori 2">
+                                        <h3>Juguete Montessori 2</h3>
+                                        <p>$97.200 COP</p>
+                                        <button class="add-to-cart btn-carrito" data-product-id="2">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-5">
+                                    <div class="product">
+                                        <img src="img/juguete5.jpg" alt="Juguete Montessori 5">
+                                        <h3>Juguete Montessori 5</h3>
+                                        <p>$22.900 COP</p>
+                                        <button class="add-to-cart btn-carrito" data-product-id="5">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="product">
+                                        <img src="img/juguete6.jpg" alt="Juguete Montessori 6">
+                                        <h3>Juguete Montessori 6</h3>
+                                        <p>$10.000 COP</p>
+                                        <button class="add-to-cart btn-carrito" data-product-id="6">Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Agregar más elementos de carousel-item según sea necesario -->
+                    </div>
+                    <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </section>
+            
+       
+
+       
+
+        <section class="location">
+            <h2>Ubicación</h2>
+            <p>Nos encontramos en la ciudad de Bogotá, en Kennedy Central. ¡Visítanos!</p>
+            <div id="map">
+                <!-- Integración de Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7953.686391307677!2d-74.15219440000001!3d4.622049650000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e996bf1d97b%3A0x29af73658a7cf760!2sCiudad%20Kennedy%20Central%2C%20Antonio%20Nari%C3%B1o%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1720474775709!5m2!1ses-419!2sco" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: contacto@wislesvariedades.com</p>
+                <p>Teléfono: +57 123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Ayuda</h3>
+                <p><a href="#">Preguntas Frecuentes</a></p>
+                <p><a href="#">Soporte</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <p><a href="#" class="icon">Facebook<img src="img/fb.jpg" alt="Facebook"></a></p>
+                <p><a href="#" class="icon">Instagram<img src="img/ig.jpg" alt="Instagram"></a></p>
+                <p><a href="#" class="icon">Whatsapp<img src="img/wp.jpg" alt="WhatsApp"></a></p>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>Medios de Pago</h3>
+                <p><img src="img/pagos.jpg" alt="Medios de Pago"></p>
             </div>
         </div>
-    </div>
-</section>
-
-
-
-    </main>
-    <footer class="text-center py-4  text-white">
-        <h6>&copy; <?php echo date('Y'); ?> Mundo Infantil Terapéutico</h6>
+        <p>&copy; 2024 Wisles Variedades. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        document.getElementById('searchBtn').addEventListener('click', function() {
-            var query = document.getElementById('searchInput').value.trim().toLowerCase();
-            var sections = document.getElementsByTagName('section');
-            var found = false;
-
-            // Remover resaltado de palabras previas
-            var highlightedWords = document.querySelectorAll('.highlight');
-            highlightedWords.forEach(function(word) {
-                word.classList.remove('highlight');
-            });
-
-            for (var i = 0; i < sections.length; i++) {
-                var section = sections[i];
-                var content = section.textContent.trim().toLowerCase();
-
-                if (content.includes(query)) {
-                    var regex = new RegExp(query, 'gi');
-                    section.innerHTML = section.innerHTML.replace(regex, '<span class="highlight">$&</span>');
-
-                    var highlightedWord = section.querySelector('.highlight');
-                    highlightedWord.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll to the start of the highlighted word
-
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found) {
-                alert('No se encontró ninguna sección que coincida con la búsqueda.');
-            }
-        });
-    </script>
+    
 </body>
-
-
 </html>
