@@ -461,3 +461,60 @@ footer .footer-columns .column {
 
 
 }
+
+
+@media screen and (max-width: 1024px) {
+
+    /* Mostrar el botón hamburguesa en dispositivos móviles y tablets */
+    .navbar-toggler {
+        display: block;
+    }
+
+    /* Ajustes para el menú desplegable */
+    .navbar-collapse {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajustar la posición del menú desplegable según el header */
+        right: 0;
+        width: 40%;
+        background-color: #4CAF50;
+        padding: 10px 0;
+        animation: slideIn 0.5s forwards; /* Animación para mostrar el menú */
+        z-index: 1000;
+        margin-top: 20px;
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Mostrar el menú desplegable al hacer clic */
+    }
+
+    /* Estilos para los enlaces del menú */
+    .nav-links, .nav-buttons {
+        text-align: center; /* Centrar los enlaces del menú */
+        display: block;
+        margin: 0;
+    }
+
+    .nav-links a, .nav-buttons button {
+        display: block; /* Mostrar como bloque */
+        width: 100%; /* Ocupa todo el ancho */
+        margin: 5px 0;
+    }
+
+
+/* Animación para desplegar el menú hamburguesa */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Desplaza el menú hacia la derecha al 100% */
+        opacity: 0; /* Inicia con opacidad 0 */
+    }
+    100% {
+        transform: translateX(0); /* Vuelve a la posición original (0) de manera gradual */
+        opacity: 1; /* Opacidad completa al final */
+    }
+}
+    .hero{
+        height: auto;
+    }
+}
