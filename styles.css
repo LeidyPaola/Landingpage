@@ -175,6 +175,8 @@ nav {
     text-align: center;
 }
 
+
+
 .montessori-method, .location {
     background: rgb(160, 235, 183);
 
@@ -282,6 +284,7 @@ footer {
     Box-shadow: 10px 10px 50px 2px #202f20; 
     background-color: #ddd;
 }
+
 
 .icon img{
     width: 40px; /* Ancho deseado para los iconos */
