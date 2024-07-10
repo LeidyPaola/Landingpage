@@ -299,7 +299,7 @@ footer {
 
 
 /* Media queries para tamaños de pantalla */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 728px) {
     /* Mostrar el botón hamburguesa en dispositivos móviles y tablets */
     .navbar-toggler {
         display: block;
